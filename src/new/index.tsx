@@ -1,5 +1,5 @@
 import React from "react";
-import { Breadcrumb } from "antd";
+import { Breadcrumb, Button, Form, Input } from "antd";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -13,14 +13,18 @@ export default () => {
         <Breadcrumb.Item>New</Breadcrumb.Item>
       </Breadcrumb>
       <h1>New</h1>
+      <Form>
+        <Form.Item label="Month" name="month">
+          <Input />
+        </Form.Item>
+        <Form.Item>
+          <Button type="primary" htmlType="submit">
+            Submit
+          </Button>
+        </Form.Item>
+      </Form>
     </Container>
   );
 };
 
-const Container = styled.div`
-  padding: 60px;
-
-  h1 {
-    margin-bottom: 10px;
-  }
-`;
+const Container = styled.div``;

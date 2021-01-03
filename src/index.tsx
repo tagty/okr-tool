@@ -5,14 +5,29 @@ import App from "./App";
 import New from "./new";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import styled from "styled-components";
+
+const Container = styled.div`
+  padding: 60px;
+
+  .ant-breadcrumb {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+`;
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Switch>
-        <Route path="/new" component={New} />
-        <Route path="/" component={App} />
-      </Switch>
+      <Container>
+        <Switch>
+          <Route path="/new" component={New} />
+          <Route path="/" component={App} />
+        </Switch>
+      </Container>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

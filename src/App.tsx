@@ -40,16 +40,6 @@ const App = () => {
 };
 
 const Container = styled.div`
-  padding: 60px;
-
-  .ant-breadcrumb {
-    margin-bottom: 10px;
-  }
-
-  h1 {
-    margin-bottom: 10px;
-  }
-
   button {
     margin-bottom: 10px;
   }
