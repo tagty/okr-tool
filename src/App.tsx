@@ -1,52 +1,58 @@
 import React from "react";
 import "./App.css";
-import { Table } from "antd";
+import { Breadcrumb, Button, Table } from "antd";
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
 const App = () => {
+  const history = useHistory();
   const dataSource = [
     {
       key: "1",
-      name: "Mike",
-      age: 32,
-      address: "10 Downing Street",
+      month: "2021/03",
     },
     {
       key: "2",
-      name: "John",
-      age: 42,
-      address: "10 Downing Street",
+      month: "2020/12",
     },
   ];
 
   const columns = [
     {
-      title: "Name",
-      dataIndex: "name",
-      key: "name",
-    },
-    {
-      title: "Age",
-      dataIndex: "age",
-      key: "age",
-    },
-    {
-      title: "Address",
-      dataIndex: "address",
-      key: "address",
+      title: "Month",
+      dataIndex: "month",
+      key: "month",
     },
   ];
 
   return (
     <Container>
+      <Breadcrumb>
+        <Breadcrumb.Item>OKRs</Breadcrumb.Item>
+      </Breadcrumb>
       <h1>OKRs</h1>
-      <Table dataSource={dataSource} columns={columns} />;
+      <Button type="primary" onClick={() => history.push("/new")}>
+        New
+      </Button>
+      <Table dataSource={dataSource} columns={columns} />
     </Container>
   );
 };
 
 const Container = styled.div`
   padding: 60px;
+
+  .ant-breadcrumb {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin-bottom: 10px;
+  }
 `;
 
 export default App;
