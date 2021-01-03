@@ -6,22 +6,23 @@ import { useHistory } from "react-router-dom";
 
 const App = () => {
   const history = useHistory();
+
   const dataSource = [
     {
       key: "1",
-      month: "2021/03",
+      quarter: "2021-Q1",
     },
     {
       key: "2",
-      month: "2020/12",
+      quarter: "2020-Q4",
     },
   ];
 
   const columns = [
     {
-      title: "Month",
-      dataIndex: "month",
-      key: "month",
+      title: "Quarter",
+      dataIndex: "quarter",
+      key: "quarter",
     },
   ];
 

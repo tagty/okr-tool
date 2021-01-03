@@ -1,5 +1,5 @@
 import React from "react";
-import { Breadcrumb, Button, Form, Input } from "antd";
+import { Breadcrumb, Form, DatePicker, Button } from "antd";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -14,8 +14,8 @@ export default () => {
       </Breadcrumb>
       <h1>New</h1>
       <Form>
-        <Form.Item label="Month" name="month">
-          <Input />
+        <Form.Item label="Quarter" name="quarter">
+          <DatePicker picker="quarter" />
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit">
